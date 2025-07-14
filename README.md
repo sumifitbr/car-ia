@@ -57,7 +57,7 @@ python run.py
 ### 4. Rodar a API com FastAPI
 
 ```bash
-uvicorn server.api:app --reload
+uvicorn server.api:app --reload --port <defina-porta-aqui>
 ```
 
 ---
