@@ -1,8 +1,4 @@
-# ============================
-# README.md
-# ============================
-
-# 🚗 CarFinder
+# 🚗 Car-IA
 
 Aplicação interativa de busca de veículos no terminal, com comunicação entre cliente e servidor via protocolo MCP (Model Context Protocol). Este projeto foi desenvolvido como parte do desafio técnico para a vaga de Desenvolvedor Python na C2S.
 
