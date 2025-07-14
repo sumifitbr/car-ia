@@ -8,7 +8,7 @@ Aplicação interativa de busca de veículos no terminal, com comunicação entr
 
 ```
 carfinder/
-├── 🧠 agent/                      # Agente virtual (chat com o usuário no terminal)
+├── 🧠 agent/                     # Agente virtual (chat com o usuário no terminal)
 │   └── main.py                   # Lógica de perguntas e interação com o usuário final
 │
 ├── 📡 client/                    # Cliente MCP (camada de comunicação)
@@ -16,18 +16,19 @@ carfinder/
 │
 ├── 🖥️ server/                    # Servidor MCP (lida com a lógica de busca)
 │   ├── server.py                 # Interpreta filtros e responde com dados do banco
-│   └── handlers.py              # [Opcional] lógica auxiliar para futuras extensões
+│   └── handlers.py               # Lógica auxiliar para futuras extensões
+│   └── api.py                    # API REST com FASTAPI para consulta de veiculos
 │
 ├── 🗃️ database/                  # Banco de dados local com SQLAlchemy
-│   ├── models.py                # Modelo da tabela `Veiculo`
-│   ├── seed.py                  # Script para gerar dados falsos (100 veículos)
-│   └── db.py                    # Conexão e criação do SQLite
+│   ├── models.py                 # Modelo da tabela `Veiculo`
+│   ├── seed.py                   # Script para gerar dados falsos (100 veículos)
+│   └── db.py                     # Conexão e criação do SQLite
 │
 ├── 🧪 tests/                     # Testes automatizados com pytest
-│   └── test_agent.py            # Testa a montagem de filtros e integração básica
+│   └── test_agent.py             # Testa a montagem de filtros e integração básica
 │
-├── 📦 requirements.txt          # Lista de dependências do projeto
-├── 📖 README.md                 # Documentação e instruções de uso
+├── 📦 requirements.txt           # Lista de dependências do projeto
+├── 📖 README.md                  # Documentação e instruções de uso
 └── 🚀 run.py                     # Ponto de entrada da aplicação no terminal
 ```
 
@@ -53,7 +54,15 @@ python database/seed.py
 python run.py
 ```
 
-### 4. Rodar os testes
+### 4. Rodar a API com FastAPI
+
+```bash
+uvicorn server.api:app --reload
+```
+
+---
+
+### 5. Rodar os testes
 
 ```bash
 pytest
@@ -61,7 +70,7 @@ pytest
 
 ---
 
-### 5. Se for usar o spaCy, não esqueça de baixar um modelo de idioma (ex: pt_core_news_sm):
+### 6. Se for usar o spaCy, não esqueça de baixar um modelo de idioma (ex: pt_core_news_sm):
 
 ```bash
 python -m spacy download pt_core_news_sm
@@ -78,6 +87,10 @@ Usuário
 agent/ ➝ client/ ➝ server/ ➝ database/
                 ⬅         ⬅
               Resposta formatada com carros compatíveis
+
+ou
+
+Usuário ➝ FastAPI REST ➝ server/database
 ```
 
 ---
@@ -88,6 +101,7 @@ agent/ ➝ client/ ➝ server/ ➝ database/
 - Filtros flexíveis: marca, modelo, ano, combustível, preço
 - Banco SQLite com 100 veículos gerados via Faker
 - Arquitetura cliente-servidor com protocolo MCP
+- API REST disponível com FastAPI
 - Teste automatizado básico com pytest
 
 ---
