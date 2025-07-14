@@ -1,0 +1,44 @@
+
+[SUCESSO]
+Entrada: quero um carro flex até 45 mil de 2016 pra frente
+Saída: {'marca': None, 'modelo': None, 'ano': 2016, 'combustivel': 'flex', 'preco_max': 45000.0}
+
+[SUCESSO]
+Entrada: quero um carro 2011 vermelho
+Saída: {'marca': None, 'modelo': None, 'ano': 2011, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex, ano minimo 2018 até 50 mil
+Saída: {'marca': None, 'modelo': 'flex', 'ano': 2018, 'combustivel': None, 'preco_max': 50000.0}
+
+[SUCESSO]
+Entrada: carro flex, ano minimo 2018
+Saída: {'marca': None, 'modelo': 'flex', 'ano': 2018, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': 'flex', 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex, branco da Jackson
+Saída: {'marca': 'Jackson', 'modelo': None, 'ano': None, 'combustivel': 'flex', 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex, branco da Jackson ano 2020
+Saída: {'marca': 'Jackson', 'modelo': 'flex', 'ano': 2020, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex, branco da Jackson
+Saída: {'marca': 'Jackson', 'modelo': None, 'ano': None, 'combustivel': 'flex', 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex, branco da Jackson
+Saída: {'marca': 'Jackson', 'modelo': None, 'ano': None, 'combustivel': 'flex', 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro flex, branco da Jackson
+Saída: {'marca': 'Jackson', 'modelo': None, 'ano': None, 'combustivel': 'flex', 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro 2011
+Saída: {'marca': None, 'modelo': None, 'ano': 2011, 'combustivel': None, 'preco_max': None}

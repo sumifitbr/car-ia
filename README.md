@@ -105,3 +105,15 @@ Usuário ➝ FastAPI REST ➝ server/database
 - Teste automatizado básico com pytest
 
 ---
+
+#### Executando
+
+##### Linha de Comando
+
+##### FAST API
+
+##### Streamlit
+
+```bash
+PYTHONPATH=$(pwd) streamlit run streamlit/index.py
+```
