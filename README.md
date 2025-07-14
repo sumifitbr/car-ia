@@ -91,7 +91,3 @@ agent/ ➝ client/ ➝ server/ ➝ database/
 - Teste automatizado básico com pytest
 
 ---
-
-## 👨‍💻 Desenvolvido para: C2S | Vaga Python Developer
-
-Projeto com fins de avaliação técnica, mas desenvolvido com cuidado real para ser usado e expandido como exemplo profissional.
