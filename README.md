@@ -14,15 +14,18 @@ carfinder/
 ├── 📡 client/                    # Cliente MCP (camada de comunicação)
 │   └── client.py                 # Envia os filtros da busca ao servidor
 │
+├── 🗃️ database/                  # Banco de dados local com SQLAlchemy
+│   ├── models.py                 # Modelo da tabela `Veiculo`
+│   ├── seed.py                   # Script para gerar dados falsos (100 veículos)
+│   └── db.py                     # Conexão e criação do SQLite
+│
 ├── 🖥️ server/                    # Servidor MCP (lida com a lógica de busca)
 │   ├── server.py                 # Interpreta filtros e responde com dados do banco
 │   └── handlers.py               # Lógica auxiliar para futuras extensões
 │   └── api.py                    # API REST com FASTAPI para consulta de veiculos
 │
-├── 🗃️ database/                  # Banco de dados local com SQLAlchemy
-│   ├── models.py                 # Modelo da tabela `Veiculo`
-│   ├── seed.py                   # Script para gerar dados falsos (100 veículos)
-│   └── db.py                     # Conexão e criação do SQLite
+├── 🌐 streamlit/                # Aplicação Streamlit
+│   ├── index.py                 # Principal arquivo da apliação Streamlit
 │
 ├── 🧪 tests/                     # Testes automatizados com pytest
 │   └── test_agent.py             # Testa a montagem de filtros e integração básica
