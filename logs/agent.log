@@ -42,3 +42,131 @@ SaÃ­da: {'marca': 'Jackson', 'modelo': None, 'ano': None, 'combustivel': 'flex',
 [SUCESSO]
 Entrada: carro 2011
 SaÃ­da: {'marca': None, 'modelo': None, 'ano': 2011, 'combustivel': None, 'preco_max': None}
+
+[FALHA]
+Entrada: Carro azul
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FE8C5280>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[FALHA]
+Entrada: Azul
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FE8C4D70>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[FALHA]
+Entrada: Carro flex, azul
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FC176AB0>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[FALHA]
+Entrada: carro flex, ano mínimo 2018
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FE8C4C50>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[FALHA]
+Entrada: carro flex, ano mínimo 2018
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FE8C50D0>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[FALHA]
+Entrada: carro flex, ano mínimo 2018
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FE8C4EF0>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[FALHA]
+Entrada:  carro flex, ano mínimo 2018
+Saída: HTTPConnectionPool(host='localhost', port=11434): Max retries exceeded with url: /api/chat (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F4FE8C4F20>: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))
+
+[SUCESSO]
+Entrada:  carro flex, ano mínimo 2018
+Saída: {'marca': None, 'modelo': None, 'ano': 2018, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada:  carro azul
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: azul
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: cor branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: cor branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero um sedan automático da Honda até 70 mil reais, a partir de 2020
+Saída: {'marca': 'Honda', 'modelo': None, 'ano': 2020, 'combustivel': None, 'preco_max': 70000.0}
+
+[FALHA]
+Entrada: quero um sedan automático da Cardenas-Scott até 70 mil reais, a partir de 2020
+Saída: Connection error.
+
+[FALHA]
+Entrada: quero um sedan automático da Cardenas-Scott até 70 mil reais, a partir de 2020
+Saída: Connection error.
+
+[FALHA]
+Entrada: quero Cardenas-Scott até 70 mil reais, a partir de 2020
+Saída: Connection error.
+
+[SUCESSO]
+Entrada: quero Cardenas-Scott até 70 mil reais, a partir de 2020
+Saída: {'marca': 'Cardenas-Scott', 'modelo': None, 'ano': 2020, 'combustivel': None, 'preco_max': 70000.0}
+
+[SUCESSO]
+Entrada: quero Cardenas-Scott até 70 mil reais
+Saída: {'marca': 'Cardenas-Scott', 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': 70000.0}
+
+[SUCESSO]
+Entrada: quero somente carros brancos
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros brancos
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros Branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros Branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros Branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero Branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'combustivel': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carro branco
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carros vermelhos
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Vermelho', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carros brancos
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: carros azul
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Azul', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}

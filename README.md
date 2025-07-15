@@ -7,7 +7,7 @@ Aplicação interativa de busca de veículos no terminal, com comunicação entr
 ## 🧭 Estrutura do Projeto
 
 ```
-carfinder/
+car-ia/
 ├── 🧠 agent/                     # Agente virtual (chat com o usuário no terminal)
 │   └── main.py                   # Lógica de perguntas e interação com o usuário final
 │
@@ -117,6 +117,19 @@ Usuário ➝ FastAPI REST ➝ server/database
 
 ##### Streamlit
 
+Linux
 ```bash
 PYTHONPATH=$(pwd) streamlit run streamlit/index.py
+```
+
+Windows PowerShell
+```bash
+$env:PYTHONPATH = (Get-Location)
+streamlit run streamlit/index.py
+```
+
+Windows CMD
+```bash
+set PYTHONPATH=%cd%
+streamlit run streamlit/index.py
 ```

@@ -22,7 +22,10 @@ if st.button("Buscar") and query.strip():
         if filtros is None:
             st.error("Erro ao interpretar sua busca. Tente novamente.")
         else:
+            
             resultados = send_filters(filtros.dict())
+            st.caption(filtros.dict())
+            
             if not resultados:
                 st.warning("Nenhum veículo encontrado com os filtros fornecidos.")
             else:

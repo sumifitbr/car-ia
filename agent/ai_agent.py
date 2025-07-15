@@ -44,15 +44,48 @@ class FiltrosVeiculo(BaseModel):
     marca: Optional[str] = Field(None, description="Marca do carro")
     modelo: Optional[str] = Field(None, description="Modelo do carro")
     ano: Optional[int] = Field(None, description="Ano mínimo")
+    motorizacao: Optional[float] = Field(None, description="Motorização do carro")
     combustivel: Optional[str] = Field(None, description="Tipo de combustível")
+    cor: Optional[str] = Field(None, description="Cor do carro")
+    quilometragem: Optional[int] = Field(None, description="Quilometragem do carro")
+    portas: Optional[int] = Field(None, description="Portas do carro")
+    transmissao: Optional[str] = Field(None, description="Transmissão do carro")
     preco_max: Optional[float] = Field(None, description="Preço máximo")
 
 parser = PydanticOutputParser(pydantic_object=FiltrosVeiculo)
 
 template = """
-Você é um assistente de busca de veículos. O usuário digitará uma frase com seus critérios de busca.
-Extraia os filtros de marca, modelo, ano mínimo, tipo de combustível e preço máximo (se houver).
+Você é um assistente que transforma buscas em linguagem natural em filtros estruturados para busca de carros.
+
+Extraia os seguintes campos:
+- marca (string)
+- modelo (string)
+- ano (inteiro, mínimo)
+- motorizacao (float)
+- combustivel (string: gasolina, etanol, flex, diesel, etc)
+- cor (string)
+- quilometragem (inteiro)
+- portas (inteiro)
+- transmissao (string)
+- preco_max (float, em reais)
+
 {format_instructions}
+
+Exemplo:
+Frase do usuário: "quero um sedan automático da Honda até 70 mil reais, a partir de 2020"
+Resposta:
+{{
+  "marca": "Honda",
+  "modelo": null,
+  "ano": 2020,
+  "motorizacao": 3.2,
+  "combustivel": null,
+  "cor": "Branco",
+  "quilometragem": 123612,
+  "portas": 4,
+  "transmissao": "Automática",
+  "preco_max": 70000.0
+}}
 
 Frase do usuário: {user_input}
 """
