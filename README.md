@@ -27,9 +27,6 @@ car-ia/
 ├── 🌐 streamlit/                # Aplicação Streamlit
 │   ├── index.py                 # Principal arquivo da apliação Streamlit
 │
-├── 🧪 tests/                     # Testes automatizados com pytest
-│   └── test_agent.py             # Testa a montagem de filtros e integração básica
-│
 ├── 📦 requirements.txt           # Lista de dependências do projeto
 ├── 📖 README.md                  # Documentação e instruções de uso
 └── 🚀 run.py                     # Ponto de entrada da aplicação no terminal
