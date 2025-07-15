@@ -62,15 +62,7 @@ uvicorn server.api:app --reload --port <defina-porta-aqui>
 
 ---
 
-### 5. Rodar os testes
-
-```bash
-pytest
-```
-
----
-
-### 6. Se for usar o spaCy, não esqueça de baixar um modelo de idioma (ex: pt_core_news_sm):
+### 5. Se for usar o spaCy, não esqueça de baixar um modelo de idioma (ex: pt_core_news_sm):
 
 ```bash
 python -m spacy download pt_core_news_sm
@@ -102,7 +94,6 @@ Usuário ➝ FastAPI REST ➝ server/database
 - Banco SQLite com 100 veículos gerados via Faker
 - Arquitetura cliente-servidor com protocolo MCP
 - API REST disponível com FastAPI
-- Teste automatizado básico com pytest
 
 ---
 

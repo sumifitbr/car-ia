@@ -10,16 +10,34 @@ from database.models import Veiculo
 init_db()
 session = get_session()
 
-faker = Faker()
+faker = Faker('pt_BR')
+
+# Listas realistas para o Brasil
+marcas_modelos = {
+    'Volkswagen': ['Gol', 'Voyage', 'Polo', 'T-Cross'],
+    'Fiat': ['Uno', 'Palio', 'Mobi', 'Toro'],
+    'Chevrolet': ['Onix', 'Prisma', 'Celta', 'Tracker'],
+    'Ford': ['Ka', 'Fiesta', 'EcoSport', 'Ranger'],
+    'Toyota': ['Corolla', 'Etios', 'Hilux', 'Yaris'],
+    'Hyundai': ['HB20', 'Creta'],
+    'Honda': ['Civic', 'Fit', 'HR-V'],
+    'Renault': ['Sandero', 'Logan', 'Duster'],
+    'Peugeot': ['208', '2008'],
+    'Citroën': ['C3', 'C4 Cactus']
+}
+
 combustiveis = ['Gasolina', 'Etanol', 'Flex', 'Diesel', 'Elétrico']
 cores = ['Preto', 'Branco', 'Cinza', 'Vermelho', 'Azul']
 transmissoes = ['Manual', 'Automática']
 
 total_cars = 1000
 for _ in range(total_cars):
+    marca = random.choice(list(marcas_modelos.keys()))
+    modelo = random.choice(marcas_modelos[marca])
+
     v = Veiculo(
-        marca=faker.company(),
-        modelo=faker.word(),
+        marca=marca,
+        modelo=modelo,
         ano=random.randint(2000, 2024),
         motorizacao=f"{random.randint(1, 3)}.{random.randint(0, 9)}",
         combustivel=random.choice(combustiveis),
