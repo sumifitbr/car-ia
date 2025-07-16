@@ -170,3 +170,23 @@ Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combus
 [SUCESSO]
 Entrada: carros azul
 Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Azul', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros brancos
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros brancos a partir de 2022
+Saída: {'marca': None, 'modelo': None, 'ano': 2022, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros brancos maior que 2022
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros brancos maior que 2022
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero somente carros brancos maior que 2022
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}

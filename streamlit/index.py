@@ -24,7 +24,7 @@ if st.button("Buscar") and query.strip():
         else:
             
             resultados = send_filters(filtros.dict())
-            st.caption(filtros.dict())
+            #st.caption(filtros.dict())
             
             if not resultados:
                 st.warning("Nenhum veículo encontrado com os filtros fornecidos.")

@@ -16,11 +16,15 @@ llm = None
 if LLM_PROVIDER == "openai":
     from langchain_community.chat_models import ChatOpenAI
     llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo")
+    # Necessário ter uma API KEY em plataform https://platform.openai.com
+    # Necessário adicionar o cartão de crédito
 
 elif LLM_PROVIDER == "ollama":
     from langchain_community.chat_models import ChatOllama
     llm = ChatOllama(model=os.getenv("OLLAMA_MODEL", "llama3"))
+    # Acima de 5.9 de ram (ambiente local)
 
+# Opção com modelos gratuitos sem a necessidade de um LLM local
 elif LLM_PROVIDER == "openrouter":
     from langchain_community.chat_models import ChatOpenAI
 

@@ -16,7 +16,7 @@ car-ia/
 │
 ├── 🗃️ database/                  # Banco de dados local com SQLAlchemy
 │   ├── models.py                 # Modelo da tabela `Veiculo`
-│   ├── seed.py                   # Script para gerar dados falsos (100 veículos)
+│   ├── fill_table.py             # Script para gerar dados falsos (100 veículos)
 │   └── db.py                     # Conexão e criação do SQLite
 │
 ├── 🖥️ server/                    # Servidor MCP (lida com a lógica de busca)
@@ -24,8 +24,8 @@ car-ia/
 │   └── handlers.py               # Lógica auxiliar para futuras extensões
 │   └── api.py                    # API REST com FASTAPI para consulta de veiculos
 │
-├── 🌐 streamlit/                # Aplicação Streamlit
-│   ├── index.py                 # Principal arquivo da apliação Streamlit
+├── 🌐 streamlit/                 # Aplicação Streamlit
+│   ├── index.py                  # Principal arquivo da apliação Streamlit
 │
 ├── 📦 requirements.txt           # Lista de dependências do projeto
 ├── 📖 README.md                  # Documentação e instruções de uso
@@ -45,65 +45,17 @@ pip install -r requirements.txt
 ### 2. Popular o banco com dados simulados
 
 ```bash
-python database/seed.py
+python database/fill_table.py
 ```
 
-### 3. Executar a aplicação
+### 3. Rodar a aplicação via terminal
 
 ```bash
 python run.py
 ```
 
-### 4. Rodar a API com FastAPI
 
-```bash
-uvicorn server.api:app --reload --port <defina-porta-aqui>
-```
-
----
-
-### 5. Se for usar o spaCy, não esqueça de baixar um modelo de idioma (ex: pt_core_news_sm):
-
-```bash
-python -m spacy download pt_core_news_sm
-```
-
----
-
-## 🧩 Fluxo da Aplicação
-
-```
-Usuário
-  │
-  ▼
-agent/ ➝ client/ ➝ server/ ➝ database/
-                ⬅         ⬅
-              Resposta formatada com carros compatíveis
-
-ou
-
-Usuário ➝ FastAPI REST ➝ server/database
-```
-
----
-
-## ✅ Funcionalidades
-
-- Chat com agente virtual no terminal (nada de menu fixo!)
-- Filtros flexíveis: marca, modelo, ano, combustível, preço
-- Banco SQLite com 100 veículos gerados via Faker
-- Arquitetura cliente-servidor com protocolo MCP
-- API REST disponível com FastAPI
-
----
-
-#### Executando
-
-##### Linha de Comando
-
-##### FAST API
-
-##### Streamlit
+### 4. Rodar a aplicação via Streamlit
 
 Linux
 ```bash
@@ -121,3 +73,49 @@ Windows CMD
 set PYTHONPATH=%cd%
 streamlit run streamlit/index.py
 ```
+
+### 5. Rodar a aplicação via API com FastAPI
+
+Com definição de porta
+```bash
+uvicorn server.api:app --reload --port <defina-porta-aqui>
+```
+
+Porta padrão
+```bash
+uvicorn server.api:app --reload
+```
+
+Observação
+
+Ao iniciar o FastApi, ira abrir localmente na URL [http://127.0.0.1:8000](http://127.0.0.1:8000), porém será necessário adicionar o /docs no final da URL para entrar no Swagger.
+
+![Fast API](imagens/fast_api.PNG)
+
+---
+
+## 🧩 Fluxo da Aplicação
+
+```
+Usuário / Streamlit
+  │
+  ▼
+agent/ ➝ client/ ➝ server/ ➝ database/
+                ⬅         ⬅
+              Resposta formatada com carros compatíveis
+
+ou
+
+Usuário ➝ FastAPI REST ➝ server/database
+
+```
+
+---
+
+## ✅ Funcionalidades
+
+- Chat com agente virtual no terminal (nada de menu fixo!)
+- Filtros flexíveis: marca, modelo, ano, motorizacao, combustível, cor, quilometragem, portas, transmissao, preço
+- Banco SQLite com 100 veículos gerados via Faker
+- Arquitetura cliente-servidor com protocolo MCP
+- API REST disponível com FastAPI
