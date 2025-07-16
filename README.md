@@ -118,4 +118,5 @@ Usuário ➝ FastAPI REST ➝ server/database
 - Filtros flexíveis: marca, modelo, ano, motorizacao, combustível, cor, quilometragem, portas, transmissao, preço
 - Banco SQLite com 100 veículos gerados via Faker
 - Arquitetura cliente-servidor com protocolo MCP
+- Pesquisa disponível com Streamlit
 - API REST disponível com FastAPI
