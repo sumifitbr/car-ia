@@ -368,3 +368,71 @@ For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/er
 [SUCESSO]
 Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
 Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um carro automático da Toyota entre 2018 e 2020, até 70 mil reais
+Saída: {'marca': 'Toyota', 'modelo': None, 'ano': 2018, 'motorizacao': None, 'combustivel': None, 'cor': None, 'quilometragem': None, 'portas': None, 'transmissao': 'Automática', 'preco_max': 70000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: - Se o usuário disser "flex", extraia apenas os registros com o combustivel igual à "flex".
+Saída: {'marca': None, 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': None, 'combustivel': None, 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752796800000'}, 'provider_name': None}}, 'user_id': 'user_2sJDMp2JxKHByMK6yo32rjPL0yX'}
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 5 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752796800000'}, 'provider_name': None}}, 'user_id': 'user_2sJDMp2JxKHByMK6yo32rjPL0yX'}
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Error code: 429 - {'error': {'message': 'Rate limit exceeded: free-models-per-day. Add 5 credits to unlock 1000 free model requests per day', 'code': 429, 'metadata': {'headers': {'X-RateLimit-Limit': '50', 'X-RateLimit-Remaining': '0', 'X-RateLimit-Reset': '1752796800000'}, 'provider_name': None}}, 'user_id': 'user_2sJDMp2JxKHByMK6yo32rjPL0yX'}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: Quero um fiat uno branco, ano entre 2020 e 2024
+Saída: {'marca': 'fiat', 'modelo': 'uno', 'ano': 2020, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}
+
+[SUCESSO]
+Entrada: fiat uno branco
+Saída: {'marca': 'Fiat', 'modelo': 'Uno', 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
