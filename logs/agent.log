@@ -190,3 +190,181 @@ Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combus
 [SUCESSO]
 Entrada: quero somente carros brancos maior que 2022
 Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: Fiat uno branco com ano maior que 2022
+Saída: {'marca': 'Fiat', 'modelo': 'Uni', 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: fiat uno branco
+Saída: {'marca': 'Fiat', 'modelo': 'Uno', 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[FALHA]
+Entrada: quero um fiat uno branco, onde o ano é maior que 2022
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "Fiat", "modelo": "Uno", "ano": {"minimum": 2023}, "motorizacao": null, "combustivel": null, "cor": "Branco", "quilometragem": null, "portas": null, "transmissao": null, "preco_max": null}. Got: 1 validation error for FiltrosVeiculo
+ano
+  Input should be a valid integer [type=int_type, input_value={'minimum': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "Toyota", "modelo": "Corolla", "ano": {"gte": 2021, "lte": 2023}, "motorizacao": null, "combustivel": "Flex", "cor": null, "quilometragem": {"lte": 60000}, "portas": null, "transmissao": null, "preco_max": 85000.0}. Got: 1 validation error for FiltrosVeiculo
+preco_max
+  Input should be a valid dictionary or instance of IntervaloFloat [type=model_type, input_value=85000.0, input_type=float]
+    For further information visit https://errors.pydantic.dev/2.11/v/model_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'Flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'Flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'Flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': {'gte': 2021, 'lte': 2023}, 'motorizacao': None, 'combustivel': 'flex', 'cor': None, 'quilometragem': {'gte': None, 'lte': 60000}, 'portas': None, 'transmissao': None, 'preco_max': {'gte': None, 'lte': 85000.0}}
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "Toyota", "modelo": "Corolla", "ano": {"minimum": 2021, "maximum": 2023}, "motorizacao": "flex", "combustivel": "flex", "cor": null, "quilometragem": {"maximum": 60000}, "portas": null, "transmissao": null, "preco_max": 85000.0}. Got: 2 validation errors for FiltrosVeiculo
+ano
+  Input should be a valid integer [type=int_type, input_value={'minimum': 2021, 'maximum': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+quilometragem
+  Input should be a valid integer [type=int_type, input_value={'maximum': 60000}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[SUCESSO]
+Entrada: Fiat branco
+Saída: {'marca': 'Fiat', 'modelo': None, 'ano': None, 'motorizacao': None, 'combustivel': None, 'cor': 'Branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[FALHA]
+Entrada: fiat branco, ano maior que 2022
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "Fiat", "modelo": null, "ano": {"greaterThan": 2022}, "motorizacao": null, "combustivel": null, "cor": "Branco", "quilometragem": null, "portas": null, "transmissao": null, "preco_max": null}. Got: 1 validation error for FiltrosVeiculo
+ano
+  Input should be a valid integer [type=int_type, input_value={'greaterThan': 2022}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[FALHA]
+Entrada: fiat branco, ano igual a 2023
+Saída: Invalid json output: Resposta:
+{
+  "marca": "Fiat",
+  "modelo": null,
+  "ano": 2023,
+  "motorizacao": null,
+  "combustivel": null,
+  "cor": "Branco",
+  "quilometragem": null,
+  "portas": null,
+  "transmissao": null,
+  "preco_max": null
+}
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "Toyota", "modelo": "Corolla", "ano": {"minimum": 2021, "maximum": 2023}, "motorizacao": "flex", "combustivel": "flex", "cor": null, "quilometragem": {"maximum": 60000}, "portas": null, "transmissao": null, "preco_max": 85000.0}. Got: 2 validation errors for FiltrosVeiculo
+ano
+  Input should be a valid integer [type=int_type, input_value={'minimum': 2021, 'maximum': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+quilometragem
+  Input should be a valid integer [type=int_type, input_value={'maximum': 60000}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[SUCESSO]
+Entrada: fiat branco, ano igual a 2023
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: fiat branco, ano igual a 2023
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: fiat branco, somente  ano igual a 2023
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: fiat branco, ano 2023
+Saída: {'marca': 'fiat', 'modelo': 'null', 'ano': 2023, 'motorizacao': 'null', 'combustivel': 'null', 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': 'null', 'preco_max': None}
+
+[SUCESSO]
+Entrada: fiat branco, ano igual 2023
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero um carro da marca fiat, da cor branca e do ano de 2023
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'branca', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero um carro da marca fiat, da cor branco e do ano de 2023
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[FALHA]
+Entrada: quero um carro da marca fiat, da cor branca entre os anos de 2022 e 2023
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "fiat", "cor": "branca", "ano": {"minimum": 2022, "maximum": 2023}, "motorizacao": null, "combustivel": null, "quilometragem": null, "portas": null, "transmissao": null, "preco_max": null}. Got: 1 validation error for FiltrosVeiculo
+ano
+  Input should be a valid integer [type=int_type, input_value={'minimum': 2022, 'maximum': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[SUCESSO]
+Entrada: quero um carro da marca fiat, da cor branca entre os anos de 2022 e 2023 
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2022, 'motorizacao': None, 'combustivel': None, 'cor': 'branca', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero um carro da marca fiat, da cor branco entre os anos de 2022 e 2023 
+Saída: {'marca': 'fiat', 'modelo': None, 'ano': 2022, 'motorizacao': None, 'combustivel': None, 'cor': 'branco', 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero carros do ano de 2023
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': None, 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero carros do ano de 2023
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': None, 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero carros do ano de 2023
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': None, 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[SUCESSO]
+Entrada: quero carros do ano de 2023
+Saída: {'marca': None, 'modelo': None, 'ano': 2023, 'motorizacao': None, 'combustivel': None, 'cor': None, 'quilometragem': None, 'portas': None, 'transmissao': None, 'preco_max': None}
+
+[FALHA]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: Failed to parse FiltrosVeiculo from completion {"marca": "Toyota", "modelo": "Corolla", "ano": {"minimum": 2021, "maximum": 2023}, "motorizacao": "flex", "combustivel": "flex", "cor": null, "quilometragem": {"maximum": 60000}, "portas": null, "transmissao": null, "preco_max": 85000.0}. Got: 2 validation errors for FiltrosVeiculo
+ano
+  Input should be a valid integer [type=int_type, input_value={'minimum': 2021, 'maximum': 2023}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+quilometragem
+  Input should be a valid integer [type=int_type, input_value={'maximum': 60000}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/int_type
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/OUTPUT_PARSING_FAILURE 
+
+[SUCESSO]
+Entrada: quero um Toyota Corolla flex de 2021 a 2023, com até 60 mil km e no máximo 85 mil reais
+Saída: {'marca': 'Toyota', 'modelo': 'Corolla', 'ano': 2021, 'motorizacao': 'flex', 'combustivel': 'flex', 'cor': None, 'quilometragem': 60000, 'portas': None, 'transmissao': None, 'preco_max': 85000.0}

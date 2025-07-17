@@ -48,7 +48,7 @@ class FiltrosVeiculo(BaseModel):
     marca: Optional[str] = Field(None, description="Marca do carro")
     modelo: Optional[str] = Field(None, description="Modelo do carro")
     ano: Optional[int] = Field(None, description="Ano mínimo")
-    motorizacao: Optional[float] = Field(None, description="Motorização do carro")
+    motorizacao: Optional[str] = Field(None, description="Motorização do carro")
     combustivel: Optional[str] = Field(None, description="Tipo de combustível")
     cor: Optional[str] = Field(None, description="Cor do carro")
     quilometragem: Optional[int] = Field(None, description="Quilometragem do carro")
@@ -64,8 +64,8 @@ Você é um assistente que transforma buscas em linguagem natural em filtros est
 Extraia os seguintes campos:
 - marca (string)
 - modelo (string)
-- ano (inteiro, mínimo)
-- motorizacao (float)
+- ano (inteiro, apenas o valor mínimo, sem intervalo)
+- motorizacao (string)
 - combustivel (string: gasolina, etanol, flex, diesel, etc)
 - cor (string)
 - quilometragem (inteiro)
@@ -75,21 +75,8 @@ Extraia os seguintes campos:
 
 {format_instructions}
 
-Exemplo:
-Frase do usuário: "quero um sedan automático da Honda até 70 mil reais, a partir de 2020"
-Resposta:
-{{
-  "marca": "Honda",
-  "modelo": null,
-  "ano": 2020,
-  "motorizacao": 3.2,
-  "combustivel": null,
-  "cor": "Branco",
-  "quilometragem": 123612,
-  "portas": 4,
-  "transmissao": "Automática",
-  "preco_max": 70000.0
-}}
+IMPORTANTE: Responda **somente com o JSON válido**, sem explicações, comentários ou prefixos.
+IMPORTANTE: Caso o usuário fale em "entre anos", extraia apenas o valor inicial (mínimo).
 
 Frase do usuário: {user_input}
 """
